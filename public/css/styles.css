@@ -1,0 +1,277 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "signika", sans-serif;
+  font-weight: 300;
+  font-size: .95rem;
+}
+
+ul,
+li {
+  list-style-position: inside;
+}
+
+h3 {
+  font-weight: 600;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+button {
+  border: none;
+  background: #30a9b3;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  transition: all .3s ease;
+}
+
+button:hover {
+  border: none;
+  background: #5ed4de ;
+  color: white;
+  padding: 10px;
+}
+
+button:disabled {
+  cursor: default;
+  background: #698ea5;
+}
+
+.centered-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  background: linear-gradient(180deg, #30A9B3 0%, rgba(48, 169, 179, 0.56) 51.56%, #30A9B3 100%);
+}
+
+.centered-form__form {
+  background: rgba(250, 250, 250, 0.6);
+  border: 1px solid rgb(147,170,146);
+  border-radius: 5px;
+  padding: 0px 20px;
+  margin: 20px;
+  width: 230px;
+}
+
+.form-field {
+  margin: 20px 0;
+}
+
+.form-field>* {
+  width: 100%;
+}
+
+.form-field label {
+  display: block;
+  margin-bottom: 7px;
+  text-align: center
+}
+
+.form-field input,
+.form-field select {
+  border: 1px solid #e1e1e1;
+  padding: 10px;
+}
+
+.chat {
+  display: flex;
+}
+
+.chat__sidebar {
+  overflow-y: scroll;
+  float: left;
+  width: 20%;
+  height: 100vh;
+  background: linear-gradient(180deg, #30A9B3 0%, rgba(48, 169, 179, 0.56) 51.56%, #30A9B3 100%);
+}
+
+.chat__sidebar h3 {
+  color: #e6eaee;
+  margin: 10px 20px;
+  text-align: left;
+}
+
+.chat__sidebar ul {
+  list-style-type: none;
+}
+
+.chat__sidebar li {
+  background: #e6eaee;
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.chat__main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 80%;
+  float: left;
+  background: linear-gradient(180deg, #30A9B3 0%, rgba(48, 169, 179, 0.56) 51.56%, #30A9B3 100%);
+}
+
+.chat__messages {
+  flex-grow: 1;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.chat__footer {
+  background: rgb(177,189,177);
+  display: flex;
+  padding: 10px;
+  flex-shrink: 0;
+  opacity: 0.9;
+}
+
+.chat__footer form {
+  flex-grow: 1;
+  display: flex;
+}
+
+.chat__footer form * {
+  margin-right: 10px;
+}
+
+.chat__footer input {
+  border: none;
+  padding: 10px;
+  flex-grow: 1;
+}
+
+.chat__messages {
+  list-style-type: none;
+  padding: 10px;
+}
+
+
+.message {
+  width: 100%;
+  margin-top: 3px;
+}
+
+.back {
+  width: 100%;
+  margin-top: 3px;
+  display: inline-block;
+}
+.message__body {
+  border-radius: 3px;
+  padding: 5px 10px;
+  
+  margin-bottom: 5px;
+  width: 65%;
+  background:rgb(208,248,252);
+  opacity: 0.8;
+}
+
+.message__body p{
+  font-family: 'Fjalla One';
+  color: #2c492b;
+}
+
+.message__body a {
+  font-family: 'bree serif';
+  color: #2c492b;
+  text-decoration: none;
+  color: #2e7fdf
+
+}
+
+.message__body h4  {
+  color: rgb(120,120,120);
+  font-family: 'hind';
+  font-size: 12px;
+  font-weight: 600;
+  font-style: italic;
+  
+  width: 100%;
+}
+
+.message__body span {
+  color: #2c492b;
+  font-family: 'hind';
+  font-size: 11px;
+  float: right;
+  font-weight: 700
+}
+
+.alert{ 
+  background: #c0ffc9;
+}
+
+.exit {
+  background: #ffd2d2;
+}
+
+.instruction {
+  width: 250px;
+  font-size: 0.85em;
+  /* text-align: right; */
+  color: black;
+}
+
+.instruction span {
+  font-size: 1em;
+  
+}
+
+.link {
+}
+
+.copyright {
+  color: black;
+  margin-top: 15px;
+  font-size: 0.95em;
+  /* font-family: 'signika' */
+}
+
+@media (max-width: 600px) {
+  * {
+    font-size: 1rem;
+  }
+  .chat__sidebar {
+    display: none;
+  }
+  .chat__footer {
+    flex-direction: column;
+  }
+  .chat__footer form {
+    margin-bottom: 10px;
+  }
+  .chat__footer button {
+    margin-right: 0px;
+  }
+}
+
+
+@media (max-width: 420px) {
+  .chat__main {
+    width: 100%
+  }
+}
+
+.form-field p{
+  text-align: center;
+  font-family: 'bree serif';
+  font-size: 14px;
+  padding-top: 3px;
+  color: black;
+  font-weight: 500
+}
+
+.welcome{
+  width: 100%
+}
+
+.myMessage{
+  background: #fff6de;
+  float: right;
+}

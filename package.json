@@ -1,0 +1,27 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "test": "mocha server/*/*.test.js",
+    "test-watch": "nodemon --exec 'npm test'"
+  },
+  "engines": {
+    "node": "10.1.0"
+  },
+  "author": "manski",
+  "license": "ISC",
+  "devDependencies": {
+    "expect": "^23.2.0",
+    "express": "^4.16.3",
+    "mocha": "^5.2.0",
+    "moment": "^2.22.2",
+    "nodemon": "^1.17.5",
+    "socket.io": "^2.1.1"
+  },
+  "dependencies": {
+    "express-session": "^1.15.6"
+  }
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no" >
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link href="https://fonts.googleapis.com/css?family=Hind|Fjalla+One|Bree+Serif" rel="stylesheet">
+  <link rel="stylesheet" href="./css/styles.css">
+<title>Manski Chat Page</title>
+</head>
+<body class="chat">
+  <div class="chat__sidebar">
+    <h3>People</h3>
+    <div id="users"></div>
+  </div>
+
+  <div class="chat__main">
+    
+    <ol id="messages" class="chat__messages"></ol>
+    
+    <div class="chat__footer">
+
+      <form action="" id="message-form">
+        <input type="text" name="message" placeholder="Enter Message" autofocus autocomplete="off">
+        <button>Send</button>
+      </form>
+      <!-- <button id="send-location">Send location</button> -->
+      
+    </div>
+  </div>
+
+  <script id="message_template" type="text/template">
+    <li class="message">
+      <div class="message__body welcome">
+        <p>{{text}}</p>
+        <h4>{{from}}
+          <span>{{createdAt}}</span>
+          </h4>
+        
+      </div>
+      <!-- <div class="message__title">
+      </div> -->
+    </li>
+  </script>
+
+<script id="newMessage" type="text/template">
+    <li class="message">
+      <div class="message__body">
+        <p>{{text}}</p>
+        <h4>{{from}}
+          <span>{{createdAt}}</span>
+          </h4>
+        
+      </div>
+      <!-- <div class="message__title">
+      </div> -->
+    </li>
+  </script>
+
+<script id="myMessage" type="text/template">
+    <li class="back">
+      <div class="message__body myMessage">
+        <p>{{text}}</p>
+        <h4>{{from}}
+          <span>{{createdAt}}</span>
+          </h4>
+        
+      </div>
+      <!-- <div class="message__title">
+      </div> -->
+    </li>
+  </script>
+
+
+<script id="message_alert" type="text/template">
+  <li class="message">
+    <div class="message__body alert">
+      <p>{{text}}</p>
+      <h4>{{from}}
+        <span>{{createdAt}}</span>
+      </h4>
+
+    </div>
+    <!-- <div class="message__title">
+      </div> -->
+  </li>
+</script>
+
+<script id="message_exit" type="text/template">
+  <li class="message">
+    <div class="message__body exit">
+      <p>{{text}}</p>
+      <h4>{{from}}
+        <span>{{createdAt}}</span>
+      </h4>
+
+    </div>
+    <!-- <div class="message__title">
+      </div> -->
+  </li>
+</script>
+
+
+  <script id="location_template" type="text/template">
+      <li class="message">
+        <div class="message__body">
+          <a href="{{url}}" target="_blank">My Current Location</a>
+          <h4>{{from}}
+            <span>{{createdAt}}</span>
+          </h4>
+        </div>
+        <!-- <div class="message__body">
+        </div> -->
+      </li>
+    </script>
+
+    
+
+  <script src="./js/libs/jquery-3.3.1.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/libs/moment.js"></script>
+  <script src="/js/libs/moustache.js"></script>
+  <script src="/js/libs/deparam.js"></script>
+  <script src="/js/chat.js"></script>
+
+</body>
+</html>
