@@ -3,7 +3,7 @@
 ## Description:
 This is a basic chat app made by NodeJS, nodemon, Moment & Expect. It uses a real-time bi-directional event-based communication using [Socket.io](https://www.npmjs.com/package/socket.io). The app can be simultaneously used within different devices as long as it remains with the same chat room. 
 
-  > Built with:
+## Built with:
 ![node](https://img.icons8.com/color/48/000000/nodejs.png)
 ![express](https://img.icons8.com/fluency/48/000000/node-js.png)
 ![Nodemon](https://img.icons8.com/external-tal-revivo-green-tal-revivo/36/000000/external-nodemon-process-will-automatically-restart-when-your-code-changes-logo-green-tal-revivo.png). 
