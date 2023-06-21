@@ -1,4 +1,4 @@
-# Chat App - (https://chat-nodeexpect.herokuapp.com/)
+# Chat App 
 
 ## Description:
 This is a basic chat app made by NodeJS, nodemon, Moment & Expect. It uses a real-time bi-directional event-based communication using [Socket.io](https://www.npmjs.com/package/socket.io). The app can be simultaneously used within different devices as long as it remains with the same chat room. 
